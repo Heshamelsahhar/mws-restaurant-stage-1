@@ -203,6 +203,8 @@ nav h1 a {
   right: 0;
   top: 80px;
   width: 50%;
+  height: 100%;
+  
 }
 .inside #map {
   background-color: #ccc;
@@ -212,7 +214,7 @@ nav h1 a {
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 50%;
+  width: 46.5%;
 }
 #restaurant-name {
   color: #f18200;
