@@ -150,14 +150,17 @@ createReviewHTML = (review) => {
   const li = document.createElement('li');
   li.classList.add('reviewLi');
   const name = document.createElement('p');
+  const revDiv = document.createElement('div');
   name.innerHTML = review.name;
   name.classList.add('reviewerName');
-  li.appendChild(name);
+  revDiv.appendChild(name);
 
   const date = document.createElement('p');
   date.innerHTML = review.date;
   date.classList.add('reviewDate');
-  li.appendChild(date);
+  revDiv.appendChild(date);
+  revDiv.classList.add('revDiv');
+  li.appendChild(revDiv);
 
   const rating = document.createElement('p');
   rating.innerHTML = `Rating: ${review.rating}`;
@@ -166,7 +169,7 @@ createReviewHTML = (review) => {
 
   const comments = document.createElement('p');
   comments.innerHTML = review.comments;
-  comment.classList.add('reviwerComment');
+  comments.classList.add('reviwerComment');
   li.appendChild(comments);
 
   return li;

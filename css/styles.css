@@ -10,7 +10,9 @@ body,td,th,p{
 body {
 	background-color: #fdfdfd;
 	margin: 0;
-	position:relative;
+  position:relative;
+  display: flex;
+  flex-wrap: wrap;
 }
 ul, li {
 	font-family: Arial, Helvetica, sans-serif;
@@ -196,6 +198,7 @@ nav h1 a {
   width: 100%;
   z-index: 1000;
 }
+
 .inside #map-container {
   background: blue none repeat scroll 0 0;
   height: 87%;
@@ -204,18 +207,21 @@ nav h1 a {
   top: 80px;
   width: 50%;
   height: 100%;
-  
+  z-index: 999;
 }
+
 .inside #map {
   background-color: #ccc;
   height: 100%;
   width: 100%;
 }
+
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 46.5%;
+  width: 47.5%;
 }
+
 #restaurant-name {
   color: #f18200;
   font-family: Arial,sans-serif;
@@ -226,13 +232,17 @@ nav h1 a {
   text-transform: uppercase;
   line-height: 1.1;
 }
+
 #restaurant-img {
-	width: 90%;
+  width: 90%;
+  margin: auto;
 }
+
 #restaurant-address {
   font-size: 12pt;
   margin: 10px 0px;
 }
+
 #restaurant-cuisine {
   background-color: #333;
   color: #ddd;
@@ -245,15 +255,18 @@ nav h1 a {
   text-transform: uppercase;
 	width: 90%;
 }
+
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
   padding: 140px 40px 30px;
   width: 50%;
 }
+
 #reviews-container {
   padding: 30px 40px 80px;
 }
+
 #reviews-container h2 {
   color: #f58500;
   font-size: 24pt;
@@ -261,24 +274,94 @@ nav h1 a {
   letter-spacing: -1px;
   padding-bottom: 1pt;
 }
+
 #reviews-list {
   margin: 0;
   padding: 0;
 }
+
 #reviews-list li {
   background-color: #fff;
-    border: 2px solid #f3f3f3;
+  border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
   margin: 0 0 30px;
   overflow: hidden;
-  padding: 0 20px 20px;
+  /*padding: 0 20px 20px;*/
   position: relative;
   width: 85%;
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  height: 100%;
 }
+
 #reviews-list li p {
   margin: 0 0 10px;
+  padding-left: 20px;
 }
+
 #restaurant-hours td {
   color: #666;
 }
+
+/* =============================== Review li ==================================== */
+
+.revDiv {
+  border-top-left-radius: 25px;
+  background-color: #333333;
+  width: 100%;
+  padding-top: 1em;
+  display: block;
+  margin-bottom: 10px;
+  height: 2.5em;
+}
+
+.reviewerName {
+  color: white;
+  float: left;
+  font-size: 1.5em;
+}
+
+.reviewDate {
+  color: gainsboro;
+
+  margin: 0;
+  padding-bottom: 0.5em;
+  font-size: 1.25em;
+  float: right;
+  padding-right: 1em;
+}
+
+.reviewerRating {
+  padding: 0.2em;
+  margin: auto;
+  background-color: orange;
+  width: 15%;
+  position: relative;
+  left: 3%;
+  color: white;
+  font-size: 1.25vw;
+  font-weight: bold;
+
+}
+
+/* ============================ Media Queries ============================== */
+
+@media screen and (max-width: 775px)
+{
+.inside #map-container {
+  position: relative;
+  width: 100%;
+  height: 87%;
+}
+#restaurant-container, #reviews-container {
+  width: 100%;
+}
+.inside #footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+
+} 
