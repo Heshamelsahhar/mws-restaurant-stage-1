@@ -1,6 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
+
 body,td,th,p{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
@@ -236,28 +237,26 @@ margin-left: 5%;
 .reviewerName {
   color: white;
   float: left;
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 
 .reviewDate {
   color: gainsboro;
-
   margin: 0;
   padding-bottom: 0.5em;
-  font-size: 1.25em;
+  font-size: 1em;
   float: right;
   padding-right: 1em;
 }
 
 .reviewerRating {
   padding: 0.1em;
-  margin: auto;
   background-color: orange;
-  width: 15%;
+  width: 12%;
   position: relative;
   left: 3%;
   color: white;
-  font-size: 2vw;
+  font-size: 1em;
   font-weight: bold;
 
 }
@@ -278,5 +277,24 @@ margin-left: 5%;
       padding: 0;
   }
 
+  .reviewerRating {
+    width: 15%;
+  
+  }
+}
 
+@media screen and (max-width:500px)
+{
+  .reviewerRating {
+    width: 20%;
+  
+  }
+}
+
+@media screen and (max-width:396px)
+{
+  .reviewerRating {
+    width: 25%;
+  
+  }
 }
